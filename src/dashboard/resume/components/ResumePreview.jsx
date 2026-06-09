@@ -1,5 +1,5 @@
 import { ResumeInfoContext } from '@/context/ResumeInfoContext'
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import PersonalDetailPreview from './preview/PersonalDetailPreview'
 import SummaryPreview from './preview/SummaryPreview'
 import ExperiencePreview from './preview/ExperiencePreview'
@@ -23,7 +23,7 @@ function ResumePreview() {
            {resumeInfo?.Experience?.length>0&& <ExperiencePreview resumeInfo={resumeInfo} />}
         {/* Educational  */}
         {resumeInfo?.Education?.length>0&&   <EducationalPreview resumeInfo={resumeInfo} />}
-        {/* Skilss  */}
+        {/* Skills  */}
         {resumeInfo?.Skills?.length>0&&    <SkillsPreview resumeInfo={resumeInfo}/>}
     </div>
   )
