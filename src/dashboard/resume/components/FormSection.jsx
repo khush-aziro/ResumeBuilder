@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import PersonalDetail from "./forms/PersonalDetail";
-import Summary from "./forms/Summary"; // Corrected import
+import Summary from "./forms/Summary";
 import Experience from "./forms/Experience";
 import Education from "./forms/Education";
 import Skills from "./forms/Skills";
@@ -11,7 +11,7 @@ import ThemeColour from "./ThemeColour";
 
 function FormSection() {
   const [activeFormIndex, setActiveFormIndex] = useState(1);
-  const [enableNext, setEnableNext] = useState(false); // Default to false
+  const [enableNext, setEnableNext] = useState(false);
   const { resumeId } = useParams();
 
   return (
