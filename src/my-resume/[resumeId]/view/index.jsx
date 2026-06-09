@@ -2,7 +2,7 @@ import Header from "@/components/custom/Header";
 import { Button } from "@/components/ui/button";
 import { ResumeInfoContext } from "@/context/ResumeInfoContext";
 import ResumePreview from "@/dashboard/resume/components/ResumePreview";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import GlobalApi from "./../../../../service/GlobalApi";
 import { RWebShare } from "react-web-share";
@@ -33,7 +33,7 @@ function ViewResume() {
   };
 
   return (
-    <ResumeInfoContext.Provider value={{ resumeInfo, setResumeInfo }}>
+    <ResumeInfoContext value={{ resumeInfo, setResumeInfo }}>
       <div id="no-print">
         <Header />
 
@@ -74,7 +74,7 @@ function ViewResume() {
       <div id="print-area">
         <ResumePreview />
       </div>
-    </ResumeInfoContext.Provider>
+    </ResumeInfoContext>
   );
 }
 
