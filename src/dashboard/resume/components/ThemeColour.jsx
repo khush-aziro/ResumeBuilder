@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import {
     Popover,
     PopoverContent,
@@ -50,6 +50,7 @@ function ThemeColour() {
     <div className='grid grid-cols-5 gap-3'>
         {colors.map((item,index)=>(
             <div 
+            key={index}
             onClick={()=>onColorSelect(item)}
             className={`h-5 w-5 rounded-full cursor-pointer
              hover:border-black border
